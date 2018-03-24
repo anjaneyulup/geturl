@@ -1,0 +1,8 @@
+--- #sample script for jenkins
+- hosts: server2.abc.com
+  user: jenkins
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name: download data by url adress
+    get_url: url=https://github.com/anjaneyulup/jenkinsdemo dest=/jenkins/url 
